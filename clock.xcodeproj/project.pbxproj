@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAAFA3001639B9A700ACBF03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA2FF1639B9A700ACBF03 /* UIKit.framework */; };
+		DAAFA3021639B9A700ACBF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3011639B9A700ACBF03 /* Foundation.framework */; };
+		DAAFA3041639B9A700ACBF03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3031639B9A700ACBF03 /* CoreGraphics.framework */; };
+		DAAFA30A1639B9A700ACBF03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA3081639B9A700ACBF03 /* InfoPlist.strings */; };
+		DAAFA30C1639B9A700ACBF03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFA30B1639B9A700ACBF03 /* main.m */; };
+		DAAFA3101639B9A700ACBF03 /* BADAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFA30F1639B9A700ACBF03 /* BADAppDelegate.m */; };
+		DAAFA3121639B9A700ACBF03 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA3111639B9A700ACBF03 /* Default.png */; };
+		DAAFA3141639B9A700ACBF03 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA3131639B9A700ACBF03 /* Default@2x.png */; };
+		DAAFA3161639B9A700ACBF03 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA3151639B9A700ACBF03 /* Default-568h@2x.png */; };
+		DAAFA3191639B9A700ACBF03 /* BADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFA3181639B9A700ACBF03 /* BADViewController.m */; };
+		DAAFA31C1639B9A700ACBF03 /* BADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA31A1639B9A700ACBF03 /* BADViewController.xib */; };
+		DAAFA3241639B9A700ACBF03 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3231639B9A700ACBF03 /* SenTestingKit.framework */; };
+		DAAFA3251639B9A700ACBF03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA2FF1639B9A700ACBF03 /* UIKit.framework */; };
+		DAAFA3261639B9A700ACBF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3011639B9A700ACBF03 /* Foundation.framework */; };
+		DAAFA32E1639B9A700ACBF03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA32C1639B9A700ACBF03 /* InfoPlist.strings */; };
+		DAAFA3311639B9A700ACBF03 /* clockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFA3301639B9A700ACBF03 /* clockTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAAFA3271639B9A700ACBF03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAAFA2F21639B9A700ACBF03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAAFA2FA1639B9A700ACBF03;
+			remoteInfo = clock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAAFA2FB1639B9A700ACBF03 /* clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAAFA2FF1639B9A700ACBF03 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DAAFA3011639B9A700ACBF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DAAFA3031639B9A700ACBF03 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DAAFA3071639B9A700ACBF03 /* clock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "clock-Info.plist"; sourceTree = "<group>"; };
+		DAAFA3091639B9A700ACBF03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DAAFA30B1639B9A700ACBF03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAAFA30D1639B9A700ACBF03 /* clock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clock-Prefix.pch"; sourceTree = "<group>"; };
+		DAAFA30E1639B9A700ACBF03 /* BADAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BADAppDelegate.h; sourceTree = "<group>"; };
+		DAAFA30F1639B9A700ACBF03 /* BADAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BADAppDelegate.m; sourceTree = "<group>"; };
+		DAAFA3111639B9A700ACBF03 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DAAFA3131639B9A700ACBF03 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DAAFA3151639B9A700ACBF03 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		DAAFA3171639B9A700ACBF03 /* BADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BADViewController.h; sourceTree = "<group>"; };
+		DAAFA3181639B9A700ACBF03 /* BADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BADViewController.m; sourceTree = "<group>"; };
+		DAAFA31B1639B9A700ACBF03 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BADViewController.xib; sourceTree = "<group>"; };
+		DAAFA3221639B9A700ACBF03 /* clockTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = clockTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAAFA3231639B9A700ACBF03 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		DAAFA32B1639B9A700ACBF03 /* clockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "clockTests-Info.plist"; sourceTree = "<group>"; };
+		DAAFA32D1639B9A700ACBF03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DAAFA32F1639B9A700ACBF03 /* clockTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = clockTests.h; sourceTree = "<group>"; };
+		DAAFA3301639B9A700ACBF03 /* clockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = clockTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAAFA2F81639B9A700ACBF03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAFA3001639B9A700ACBF03 /* UIKit.framework in Frameworks */,
+				DAAFA3021639B9A700ACBF03 /* Foundation.framework in Frameworks */,
+				DAAFA3041639B9A700ACBF03 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAFA31E1639B9A700ACBF03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAFA3241639B9A700ACBF03 /* SenTestingKit.framework in Frameworks */,
+				DAAFA3251639B9A700ACBF03 /* UIKit.framework in Frameworks */,
+				DAAFA3261639B9A700ACBF03 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAAFA2F01639B9A700ACBF03 = {
+			isa = PBXGroup;
+			children = (
+				DAAFA3051639B9A700ACBF03 /* clock */,
+				DAAFA3291639B9A700ACBF03 /* clockTests */,
+				DAAFA2FE1639B9A700ACBF03 /* Frameworks */,
+				DAAFA2FC1639B9A700ACBF03 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAAFA2FC1639B9A700ACBF03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFA2FB1639B9A700ACBF03 /* clock.app */,
+				DAAFA3221639B9A700ACBF03 /* clockTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAAFA2FE1639B9A700ACBF03 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFA2FF1639B9A700ACBF03 /* UIKit.framework */,
+				DAAFA3011639B9A700ACBF03 /* Foundation.framework */,
+				DAAFA3031639B9A700ACBF03 /* CoreGraphics.framework */,
+				DAAFA3231639B9A700ACBF03 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAAFA3051639B9A700ACBF03 /* clock */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFA30E1639B9A700ACBF03 /* BADAppDelegate.h */,
+				DAAFA30F1639B9A700ACBF03 /* BADAppDelegate.m */,
+				DAAFA3171639B9A700ACBF03 /* BADViewController.h */,
+				DAAFA3181639B9A700ACBF03 /* BADViewController.m */,
+				DAAFA31A1639B9A700ACBF03 /* BADViewController.xib */,
+				DAAFA3061639B9A700ACBF03 /* Supporting Files */,
+			);
+			path = clock;
+			sourceTree = "<group>";
+		};
+		DAAFA3061639B9A700ACBF03 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFA3071639B9A700ACBF03 /* clock-Info.plist */,
+				DAAFA3081639B9A700ACBF03 /* InfoPlist.strings */,
+				DAAFA30B1639B9A700ACBF03 /* main.m */,
+				DAAFA30D1639B9A700ACBF03 /* clock-Prefix.pch */,
+				DAAFA3111639B9A700ACBF03 /* Default.png */,
+				DAAFA3131639B9A700ACBF03 /* Default@2x.png */,
+				DAAFA3151639B9A700ACBF03 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAAFA3291639B9A700ACBF03 /* clockTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFA32F1639B9A700ACBF03 /* clockTests.h */,
+				DAAFA3301639B9A700ACBF03 /* clockTests.m */,
+				DAAFA32A1639B9A700ACBF03 /* Supporting Files */,
+			);
+			path = clockTests;
+			sourceTree = "<group>";
+		};
+		DAAFA32A1639B9A700ACBF03 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFA32B1639B9A700ACBF03 /* clockTests-Info.plist */,
+				DAAFA32C1639B9A700ACBF03 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAAFA2FA1639B9A700ACBF03 /* clock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAAFA3341639B9A700ACBF03 /* Build configuration list for PBXNativeTarget "clock" */;
+			buildPhases = (
+				DAAFA2F71639B9A700ACBF03 /* Sources */,
+				DAAFA2F81639B9A700ACBF03 /* Frameworks */,
+				DAAFA2F91639B9A700ACBF03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = clock;
+			productName = clock;
+			productReference = DAAFA2FB1639B9A700ACBF03 /* clock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAAFA3211639B9A700ACBF03 /* clockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAAFA3371639B9A700ACBF03 /* Build configuration list for PBXNativeTarget "clockTests" */;
+			buildPhases = (
+				DAAFA31D1639B9A700ACBF03 /* Sources */,
+				DAAFA31E1639B9A700ACBF03 /* Frameworks */,
+				DAAFA31F1639B9A700ACBF03 /* Resources */,
+				DAAFA3201639B9A700ACBF03 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAAFA3281639B9A700ACBF03 /* PBXTargetDependency */,
+			);
+			name = clockTests;
+			productName = clockTests;
+			productReference = DAAFA3221639B9A700ACBF03 /* clockTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAAFA2F21639B9A700ACBF03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BAD;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Bad Robot (London) Ltd";
+			};
+			buildConfigurationList = DAAFA2F51639B9A700ACBF03 /* Build configuration list for PBXProject "clock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = DAAFA2F01639B9A700ACBF03;
+			productRefGroup = DAAFA2FC1639B9A700ACBF03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAAFA2FA1639B9A700ACBF03 /* clock */,
+				DAAFA3211639B9A700ACBF03 /* clockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAAFA2F91639B9A700ACBF03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAFA30A1639B9A700ACBF03 /* InfoPlist.strings in Resources */,
+				DAAFA3121639B9A700ACBF03 /* Default.png in Resources */,
+				DAAFA3141639B9A700ACBF03 /* Default@2x.png in Resources */,
+				DAAFA3161639B9A700ACBF03 /* Default-568h@2x.png in Resources */,
+				DAAFA31C1639B9A700ACBF03 /* BADViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAFA31F1639B9A700ACBF03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAFA32E1639B9A700ACBF03 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DAAFA3201639B9A700ACBF03 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAAFA2F71639B9A700ACBF03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAFA30C1639B9A700ACBF03 /* main.m in Sources */,
+				DAAFA3101639B9A700ACBF03 /* BADAppDelegate.m in Sources */,
+				DAAFA3191639B9A700ACBF03 /* BADViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAAFA31D1639B9A700ACBF03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAAFA3311639B9A700ACBF03 /* clockTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAAFA3281639B9A700ACBF03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAAFA2FA1639B9A700ACBF03 /* clock */;
+			targetProxy = DAAFA3271639B9A700ACBF03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAAFA3081639B9A700ACBF03 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAAFA3091639B9A700ACBF03 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DAAFA31A1639B9A700ACBF03 /* BADViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAAFA31B1639B9A700ACBF03 /* en */,
+			);
+			name = BADViewController.xib;
+			sourceTree = "<group>";
+		};
+		DAAFA32C1639B9A700ACBF03 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAAFA32D1639B9A700ACBF03 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAAFA3321639B9A700ACBF03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DAAFA3331639B9A700ACBF03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAAFA3351639B9A700ACBF03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "clock/clock-Prefix.pch";
+				INFOPLIST_FILE = "clock/clock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DAAFA3361639B9A700ACBF03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "clock/clock-Prefix.pch";
+				INFOPLIST_FILE = "clock/clock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DAAFA3381639B9A700ACBF03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/clock.app/clock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "clock/clock-Prefix.pch";
+				INFOPLIST_FILE = "clockTests/clockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		DAAFA3391639B9A700ACBF03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/clock.app/clock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "clock/clock-Prefix.pch";
+				INFOPLIST_FILE = "clockTests/clockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAAFA2F51639B9A700ACBF03 /* Build configuration list for PBXProject "clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAAFA3321639B9A700ACBF03 /* Debug */,
+				DAAFA3331639B9A700ACBF03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAAFA3341639B9A700ACBF03 /* Build configuration list for PBXNativeTarget "clock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAAFA3351639B9A700ACBF03 /* Debug */,
+				DAAFA3361639B9A700ACBF03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAAFA3371639B9A700ACBF03 /* Build configuration list for PBXNativeTarget "clockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAAFA3381639B9A700ACBF03 /* Debug */,
+				DAAFA3391639B9A700ACBF03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAAFA2F21639B9A700ACBF03 /* Project object */;
+}

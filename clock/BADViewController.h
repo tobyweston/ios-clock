@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BADViewController : UIViewController
+@interface BADViewController : UIViewController {
+
+    IBOutlet UILabel *time;
+    NSTimer *timer;
+    
+}
+
+- (void) updateTime;
 
 @end

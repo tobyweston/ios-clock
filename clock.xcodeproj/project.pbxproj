@@ -448,6 +448,7 @@
 				DAAFA3361639B9A700ACBF03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAAFA3371639B9A700ACBF03 /* Build configuration list for PBXNativeTarget "clockTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +457,7 @@
 				DAAFA3391639B9A700ACBF03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

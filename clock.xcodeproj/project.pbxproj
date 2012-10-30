@@ -84,6 +84,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DAA3F5D216405C620091E41B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DAAFA3171639B9A700ACBF03 /* BADViewController.h */,
+				DAAFA3181639B9A700ACBF03 /* BADViewController.m */,
+				DAAFA31A1639B9A700ACBF03 /* BADViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		DAAFA2F01639B9A700ACBF03 = {
 			isa = PBXGroup;
 			children = (
@@ -117,11 +127,9 @@
 		DAAFA3051639B9A700ACBF03 /* clock */ = {
 			isa = PBXGroup;
 			children = (
+				DAA3F5D216405C620091E41B /* Controllers */,
 				DAAFA30E1639B9A700ACBF03 /* BADAppDelegate.h */,
 				DAAFA30F1639B9A700ACBF03 /* BADAppDelegate.m */,
-				DAAFA3171639B9A700ACBF03 /* BADViewController.h */,
-				DAAFA3181639B9A700ACBF03 /* BADViewController.m */,
-				DAAFA31A1639B9A700ACBF03 /* BADViewController.xib */,
 				DAAFA3061639B9A700ACBF03 /* Supporting Files */,
 			);
 			path = clock;

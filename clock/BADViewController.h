@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BADViewController : UIViewController {
+@interface BADViewController : UIViewController
 
-    IBOutlet UILabel *time;
-    NSTimer *timer;
-    
-}
+@property (nonatomic, retain) IBOutlet UILabel *time;
+@property (nonatomic, retain) NSTimer *timer;
 
-- (void) updateTime;
+- (void) startScheduledTimeRefreshEvery:(NSTimeInterval) seconds;
+
+- (void) stopScheduledTimeRefresh;
 
 @end

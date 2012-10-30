@@ -11,9 +11,12 @@
 
 @implementation BADViewController
 
+@synthesize time;
+@synthesize timer;
+
 - (void) viewDidLoad {
-    [self updateTime];
-    [self scheduleTimeUpdatesEvery:1];
+//    [self updateTime];
+    [self startScheduledTimeRefreshEvery:3];
     [super viewDidLoad];
 }
 
@@ -23,13 +26,16 @@
 
 - (void) updateTime {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"HH:mm"];
+    [formatter setDateFormat:@"HH:mm:ss"];
     time.text = [formatter stringFromDate:[NSDate date]];
 }
 
-- (void)scheduleTimeUpdatesEvery:(NSTimeInterval) seconds {
-    timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+- (void)startScheduledTimeRefreshEvery:(NSTimeInterval) seconds {
+    timer = [NSTimer scheduledTimerWithTimeInterval:seconds target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
 }
 
+- (void)stopScheduledTimeRefresh {
+    [timer invalidate];
+}
 
 @end

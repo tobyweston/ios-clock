@@ -13,7 +13,6 @@
 @interface BADAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) BADViewController *viewController;
 
 @end

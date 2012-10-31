@@ -27,6 +27,7 @@
 - (void)viewDidLoad {
     PSLog(@"");
     [super viewDidLoad];
+    time.font = [UIFont fontWithName:@"DS-Digital" size:150.0];
     [self updateTime];
     [self scheduleScheduledTimeRefreshEvery:60 from:[NSDate date]];
 }
@@ -34,8 +35,8 @@
 #pragma mark - UI Updates
 
 - (void)updateTime {
-    NSString *now = [self currentTimeAsStringWithFormat:@"HH:mm:ss"];
-    PSLog(@"Updating time %@", now);
+    NSString *now = [self currentTimeAsStringWithFormat:@"HH:mm"];
+    PSLog(@"Updating time to %@", now);
     time.text = now;
 }
 

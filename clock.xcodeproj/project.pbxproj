@@ -24,6 +24,7 @@
 		DAAFA3261639B9A700ACBF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3011639B9A700ACBF03 /* Foundation.framework */; };
 		DAAFA32E1639B9A700ACBF03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA32C1639B9A700ACBF03 /* InfoPlist.strings */; };
 		DAAFA3311639B9A700ACBF03 /* clockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFA3301639B9A700ACBF03 /* clockTests.m */; };
+		DAB7A28B16415FD000A04F75 /* digital.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAB7A28A16415FD000A04F75 /* digital.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		DAAFA32D1639B9A700ACBF03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DAAFA32F1639B9A700ACBF03 /* clockTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = clockTests.h; sourceTree = "<group>"; };
 		DAAFA3301639B9A700ACBF03 /* clockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = clockTests.m; sourceTree = "<group>"; };
+		DAB7A28A16415FD000A04F75 /* digital.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = digital.ttf; sourceTree = "<group>"; };
 		DAF2060F16410C7700AA989A /* PSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSLog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 		DAAFA3061639B9A700ACBF03 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DAB7A28A16415FD000A04F75 /* digital.ttf */,
 				DAF2060F16410C7700AA989A /* PSLog.h */,
 				DAA3F5DC16406BF50091E41B /* clock.png */,
 				DAAFA3071639B9A700ACBF03 /* clock-Info.plist */,
@@ -259,6 +262,7 @@
 				DAAFA3161639B9A700ACBF03 /* Default-568h@2x.png in Resources */,
 				DAAFA31C1639B9A700ACBF03 /* BADViewController.xib in Resources */,
 				DAA3F5DD16406BF50091E41B /* clock.png in Resources */,
+				DAB7A28B16415FD000A04F75 /* digital.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

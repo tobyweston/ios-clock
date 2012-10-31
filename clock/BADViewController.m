@@ -8,29 +8,49 @@
 
 #import "BADViewController.h"
 
+@interface BADViewController ()
+
+@property(nonatomic, retain) IBOutlet UILabel *time;
+@property(nonatomic, retain) NSTimer *timer;
+
+@end
+
 
 @implementation BADViewController
 
 @synthesize time;
 @synthesize timer;
 
-- (void) viewDidLoad {
+#pragma mark - Delegate methods
+
+- (void)viewDidLoad {
 //    [self updateTime];
-    [self startScheduledTimeRefreshEvery:3];
     [super viewDidLoad];
 }
 
-- (void) didReceiveMemoryWarning {
+-(void)viewDidAppear:(BOOL)animated {
+    [self startScheduledTimeRefreshEvery:3];
+    [super viewDidAppear:animated];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [self stopScheduledTimeRefresh];
+    [self viewDidDisappear:animated];
+}
+
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
-- (void) updateTime {
+#pragma mark - Time related methods
+
+- (void)updateTime {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"HH:mm:ss"];
     time.text = [formatter stringFromDate:[NSDate date]];
 }
 
-- (void)startScheduledTimeRefreshEvery:(NSTimeInterval) seconds {
+- (void)startScheduledTimeRefreshEvery:(NSTimeInterval)seconds {
     timer = [NSTimer scheduledTimerWithTimeInterval:seconds target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
 }
 

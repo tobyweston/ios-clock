@@ -10,9 +10,6 @@
 
 @interface BADViewController : UIViewController
 
-@property (nonatomic, retain) IBOutlet UILabel *time;
-@property (nonatomic, retain) NSTimer *timer;
-
 - (void) startScheduledTimeRefreshEvery:(NSTimeInterval) seconds;
 
 - (void) stopScheduledTimeRefresh;

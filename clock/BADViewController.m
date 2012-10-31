@@ -7,6 +7,7 @@
 //
 
 #import "BADViewController.h"
+#import "PSLog.h"
 
 @interface BADViewController ()
 
@@ -24,38 +25,47 @@
 #pragma mark - Delegate methods
 
 - (void)viewDidLoad {
-//    [self updateTime];
+    PSLog(@"");
     [super viewDidLoad];
+    [self updateTime];
+    [self scheduleScheduledTimeRefreshEvery:60 from:[NSDate date]];
 }
 
--(void)viewDidAppear:(BOOL)animated {
-    [self startScheduledTimeRefreshEvery:3];
-    [super viewDidAppear:animated];
-}
+#pragma mark - UI Updates
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [self stopScheduledTimeRefresh];
-    [self viewDidDisappear:animated];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+- (void)updateTime {
+    NSString *now = [self currentTimeAsStringWithFormat:@"HH:mm:ss"];
+    PSLog(@"Updating time %@", now);
+    time.text = now;
 }
 
 #pragma mark - Time related methods
 
-- (void)updateTime {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"HH:mm:ss"];
-    time.text = [formatter stringFromDate:[NSDate date]];
+- (void)scheduleScheduledTimeRefreshEvery:(NSTimeInterval)seconds from:(NSDate *)date {
+    double delay = seconds - [[self currentTimeAsStringWithFormat:@"ss"] doubleValue];
+    [self startScheduledTimeRefreshEvery:60 delayedBy:delay];
 }
 
-- (void)startScheduledTimeRefreshEvery:(NSTimeInterval)seconds {
-    timer = [NSTimer scheduledTimerWithTimeInterval:seconds target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+- (void)startScheduledTimeRefreshEvery:(NSTimeInterval)seconds delayedBy:(double)delayInSeconds {
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
+        [self updateTime];
+        if (timer != nil)
+            [self stopScheduledTimeRefresh];
+        timer = [NSTimer scheduledTimerWithTimeInterval:seconds target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+    });
+
 }
 
 - (void)stopScheduledTimeRefresh {
     [timer invalidate];
+    timer = nil;
+}
+
+- (NSString *)currentTimeAsStringWithFormat:(NSString *)format {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:format];
+    return [formatter stringFromDate:[NSDate date]];
 }
 
 @end

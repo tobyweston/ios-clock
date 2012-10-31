@@ -10,8 +10,8 @@
 
 @interface BADViewController : UIViewController
 
-- (void) startScheduledTimeRefreshEvery:(NSTimeInterval) seconds;
+- (void)scheduleScheduledTimeRefreshEvery:(NSTimeInterval)seconds from:(NSDate *)date;
 
-- (void) stopScheduledTimeRefresh;
+- (void)stopScheduledTimeRefresh;
 
 @end

@@ -22,7 +22,7 @@
     return self;
 }
 
-- (void)dismissView {
+- (IBAction)dismissView:(id)sender {
      [self dismissViewControllerAnimated:YES completion:nil];
 }
 

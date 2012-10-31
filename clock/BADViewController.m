@@ -7,6 +7,7 @@
 //
 
 #import "BADViewController.h"
+#import "BADInfomationViewController.h"
 #import "PSLog.h"
 
 @interface BADViewController ()
@@ -39,6 +40,15 @@
     PSLog(@"Updating time to %@", now);
     time.text = now;
 }
+
+#pragma mark - Information view
+
+- (IBAction)showInformationView:(UIButton *)sender {
+    PSLog(@"");
+    BADInfomationViewController *info = [[BADInfomationViewController alloc] initWithNibName:@"BADInfomationViewController" bundle:nil];
+    [self presentViewController:info animated:YES completion:nil];
+}
+
 
 #pragma mark - Time related methods
 

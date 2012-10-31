@@ -10,6 +10,6 @@
 
 @interface BADInfomationViewController : UIViewController
 
--(void)dismissView;
+- (IBAction)dismissView:(id)sender;
 
 @end

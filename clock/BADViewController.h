@@ -14,4 +14,6 @@
 
 - (void)stopScheduledTimeRefresh;
 
+- (IBAction)showInformationView:(UIButton *)sender;
+
 @end

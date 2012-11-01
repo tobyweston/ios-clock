@@ -17,15 +17,15 @@
 		DAAFA3121639B9A700ACBF03 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA3111639B9A700ACBF03 /* Default.png */; };
 		DAAFA3141639B9A700ACBF03 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA3131639B9A700ACBF03 /* Default@2x.png */; };
 		DAAFA3161639B9A700ACBF03 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA3151639B9A700ACBF03 /* Default-568h@2x.png */; };
-		DAAFA3191639B9A700ACBF03 /* BADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFA3181639B9A700ACBF03 /* BADViewController.m */; };
-		DAAFA31C1639B9A700ACBF03 /* BADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA31A1639B9A700ACBF03 /* BADViewController.xib */; };
+		DAAFA3191639B9A700ACBF03 /* BADClockController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFA3181639B9A700ACBF03 /* BADClockController.m */; };
+		DAAFA31C1639B9A700ACBF03 /* BADClockView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA31A1639B9A700ACBF03 /* BADClockView.xib */; };
 		DAAFA3241639B9A700ACBF03 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3231639B9A700ACBF03 /* SenTestingKit.framework */; };
 		DAAFA3251639B9A700ACBF03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA2FF1639B9A700ACBF03 /* UIKit.framework */; };
 		DAAFA3261639B9A700ACBF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3011639B9A700ACBF03 /* Foundation.framework */; };
 		DAAFA32E1639B9A700ACBF03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAFA32C1639B9A700ACBF03 /* InfoPlist.strings */; };
 		DAAFA3311639B9A700ACBF03 /* clockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAFA3301639B9A700ACBF03 /* clockTests.m */; };
-		DAB0CF5D1641A4C100A6A2DB /* BADInfomationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB0CF5B1641A4C100A6A2DB /* BADInfomationViewController.m */; };
-		DAB0CF5E1641A4C100A6A2DB /* BADInfomationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB0CF5C1641A4C100A6A2DB /* BADInfomationViewController.xib */; };
+		DAB0CF5D1641A4C100A6A2DB /* BADAlarmController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAB0CF5B1641A4C100A6A2DB /* BADAlarmController.m */; };
+		DAB0CF5E1641A4C100A6A2DB /* BADAlarmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB0CF5C1641A4C100A6A2DB /* BADAlarmView.xib */; };
 		DAB7A28B16415FD000A04F75 /* digital.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAB7A28A16415FD000A04F75 /* digital.ttf */; };
 /* End PBXBuildFile section */
 
@@ -54,18 +54,18 @@
 		DAAFA3111639B9A700ACBF03 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DAAFA3131639B9A700ACBF03 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DAAFA3151639B9A700ACBF03 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		DAAFA3171639B9A700ACBF03 /* BADViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BADViewController.h; sourceTree = "<group>"; };
-		DAAFA3181639B9A700ACBF03 /* BADViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BADViewController.m; sourceTree = "<group>"; };
-		DAAFA31B1639B9A700ACBF03 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BADViewController.xib; sourceTree = "<group>"; };
+		DAAFA3171639B9A700ACBF03 /* BADClockController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BADClockController.h; sourceTree = "<group>"; };
+		DAAFA3181639B9A700ACBF03 /* BADClockController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BADClockController.m; sourceTree = "<group>"; };
+		DAAFA31B1639B9A700ACBF03 /* BADClockView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BADClockView.xib; path = en.lproj/BADClockView.xib; sourceTree = "<group>"; };
 		DAAFA3221639B9A700ACBF03 /* clockTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = clockTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAFA3231639B9A700ACBF03 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		DAAFA32B1639B9A700ACBF03 /* clockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "clockTests-Info.plist"; sourceTree = "<group>"; };
 		DAAFA32D1639B9A700ACBF03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DAAFA32F1639B9A700ACBF03 /* clockTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = clockTests.h; sourceTree = "<group>"; };
 		DAAFA3301639B9A700ACBF03 /* clockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = clockTests.m; sourceTree = "<group>"; };
-		DAB0CF5A1641A4C100A6A2DB /* BADInfomationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADInfomationViewController.h; sourceTree = "<group>"; };
-		DAB0CF5B1641A4C100A6A2DB /* BADInfomationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADInfomationViewController.m; sourceTree = "<group>"; };
-		DAB0CF5C1641A4C100A6A2DB /* BADInfomationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BADInfomationViewController.xib; sourceTree = "<group>"; };
+		DAB0CF5A1641A4C100A6A2DB /* BADAlarmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADAlarmController.h; sourceTree = "<group>"; };
+		DAB0CF5B1641A4C100A6A2DB /* BADAlarmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADAlarmController.m; sourceTree = "<group>"; };
+		DAB0CF5C1641A4C100A6A2DB /* BADAlarmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BADAlarmView.xib; sourceTree = "<group>"; };
 		DAB7A28A16415FD000A04F75 /* digital.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = digital.ttf; sourceTree = "<group>"; };
 		DAF2060F16410C7700AA989A /* PSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSLog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,12 +97,10 @@
 		DAA3F5D216405C620091E41B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DAAFA3171639B9A700ACBF03 /* BADViewController.h */,
-				DAAFA3181639B9A700ACBF03 /* BADViewController.m */,
-				DAAFA31A1639B9A700ACBF03 /* BADViewController.xib */,
-				DAB0CF5A1641A4C100A6A2DB /* BADInfomationViewController.h */,
-				DAB0CF5B1641A4C100A6A2DB /* BADInfomationViewController.m */,
-				DAB0CF5C1641A4C100A6A2DB /* BADInfomationViewController.xib */,
+				DAAFA3171639B9A700ACBF03 /* BADClockController.h */,
+				DAAFA3181639B9A700ACBF03 /* BADClockController.m */,
+				DAB0CF5A1641A4C100A6A2DB /* BADAlarmController.h */,
+				DAB0CF5B1641A4C100A6A2DB /* BADAlarmController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -140,7 +138,7 @@
 		DAAFA3051639B9A700ACBF03 /* clock */ = {
 			isa = PBXGroup;
 			children = (
-				DAB7A2851641522D00A04F75 /* Categories */,
+				DAB0CF741642AD0900A6A2DB /* View */,
 				DAA3F5D216405C620091E41B /* Controllers */,
 				DAAFA30E1639B9A700ACBF03 /* BADAppDelegate.h */,
 				DAAFA30F1639B9A700ACBF03 /* BADAppDelegate.m */,
@@ -185,11 +183,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		DAB7A2851641522D00A04F75 /* Categories */ = {
+		DAB0CF741642AD0900A6A2DB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DAAFA31A1639B9A700ACBF03 /* BADClockView.xib */,
+				DAB0CF5C1641A4C100A6A2DB /* BADAlarmView.xib */,
 			);
-			name = Categories;
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +268,10 @@
 				DAAFA3121639B9A700ACBF03 /* Default.png in Resources */,
 				DAAFA3141639B9A700ACBF03 /* Default@2x.png in Resources */,
 				DAAFA3161639B9A700ACBF03 /* Default-568h@2x.png in Resources */,
-				DAAFA31C1639B9A700ACBF03 /* BADViewController.xib in Resources */,
+				DAAFA31C1639B9A700ACBF03 /* BADClockView.xib in Resources */,
 				DAA3F5DD16406BF50091E41B /* clock.png in Resources */,
 				DAB7A28B16415FD000A04F75 /* digital.ttf in Resources */,
-				DAB0CF5E1641A4C100A6A2DB /* BADInfomationViewController.xib in Resources */,
+				DAB0CF5E1641A4C100A6A2DB /* BADAlarmView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,8 +308,8 @@
 			files = (
 				DAAFA30C1639B9A700ACBF03 /* main.m in Sources */,
 				DAAFA3101639B9A700ACBF03 /* BADAppDelegate.m in Sources */,
-				DAAFA3191639B9A700ACBF03 /* BADViewController.m in Sources */,
-				DAB0CF5D1641A4C100A6A2DB /* BADInfomationViewController.m in Sources */,
+				DAAFA3191639B9A700ACBF03 /* BADClockController.m in Sources */,
+				DAB0CF5D1641A4C100A6A2DB /* BADAlarmController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,12 +340,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		DAAFA31A1639B9A700ACBF03 /* BADViewController.xib */ = {
+		DAAFA31A1639B9A700ACBF03 /* BADClockView.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DAAFA31B1639B9A700ACBF03 /* en */,
+				DAAFA31B1639B9A700ACBF03 /* BADClockView.xib */,
 			);
-			name = BADViewController.xib;
+			name = BADClockView.xib;
 			sourceTree = "<group>";
 		};
 		DAAFA32C1639B9A700ACBF03 /* InfoPlist.strings */ = {

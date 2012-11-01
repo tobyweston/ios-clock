@@ -1,5 +1,5 @@
 //
-//  BADInfomationViewController.h
+//  BADAlarmController.h
 //  clock
 //
 //  Created by Toby Weston on 31/10/2012.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BADInfomationViewController : UIViewController
+@interface BADAlarmController : UIViewController
 
 - (IBAction)dismissView:(id)sender;
 

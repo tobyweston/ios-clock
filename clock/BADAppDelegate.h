@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@class BADViewController;
+@class BADClockController;
 
 @interface BADAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) BADViewController *viewController;
+@property (strong, nonatomic) BADClockController *viewController;
 
 @end

@@ -1,16 +1,16 @@
 //
-//  BADViewController.m
+//  BADClockController.m
 //  clock
 //
 //  Created by Toby Weston on 25/10/2012.
 //  Copyright (c) 2012 Bad Robot (London) Ltd. All rights reserved.
 //
 
-#import "BADViewController.h"
-#import "BADInfomationViewController.h"
+#import "BADClockController.h"
+#import "BADAlarmController.h"
 #import "PSLog.h"
 
-@interface BADViewController ()
+@interface BADClockController ()
 
 @property(nonatomic, retain) IBOutlet UILabel *time;
 @property(nonatomic, retain) NSTimer *timer;
@@ -18,7 +18,7 @@
 @end
 
 
-@implementation BADViewController
+@implementation BADClockController
 
 @synthesize time;
 @synthesize timer;
@@ -45,7 +45,7 @@
 
 - (IBAction)showInformationView:(UIButton *)sender {
     PSLog(@"");
-    BADInfomationViewController *info = [[BADInfomationViewController alloc] initWithNibName:@"BADInfomationViewController" bundle:nil];
+    BADAlarmController *info = [[BADAlarmController alloc] initWithNibName:@"BADAlarmView" bundle:nil];
     [self presentViewController:info animated:YES completion:nil];
 }
 

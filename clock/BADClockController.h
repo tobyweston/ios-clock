@@ -1,5 +1,5 @@
 //
-//  BADViewController.h
+//  BADClockController.h
 //  clock
 //
 //  Created by Toby Weston on 25/10/2012.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BADViewController : UIViewController
+@interface BADClockController : UIViewController
 
 - (void)scheduleScheduledTimeRefreshEvery:(NSTimeInterval)seconds from:(NSDate *)date;
 

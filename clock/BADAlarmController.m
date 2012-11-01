@@ -1,18 +1,18 @@
 //
-//  BADInfomationViewController.m
+//  BADAlarmController.m
 //  clock
 //
 //  Created by Toby Weston on 31/10/2012.
 //  Copyright (c) 2012 Bad Robot (London) Ltd. All rights reserved.
 //
 
-#import "BADInfomationViewController.h"
+#import "BADAlarmController.h"
 
-@interface BADInfomationViewController ()
+@interface BADAlarmController ()
 
 @end
 
-@implementation BADInfomationViewController
+@implementation BADAlarmController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

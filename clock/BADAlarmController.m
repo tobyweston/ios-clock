@@ -8,14 +8,12 @@
 
 #import "BADAlarmController.h"
 #import "BADTime.h"
-#import "PSLog.h"
 
 @interface BADAlarmController ()
 
-@property(nonatomic, retain) IBOutlet UISwipeGestureRecognizer *swipeRecognizer;
 @property(nonatomic, retain) IBOutlet UILabel *alarm;
 @property(nonatomic, retain) IBOutlet UILabel *backgroundTime;
-@property(nonatomic, retain) UIColor *text;
+@property(nonatomic, retain) UIColor *originalTextColor;
 
 @property(nonatomic) CGPoint startOfSwipe;
 @property(nonatomic) BOOL shouldBlink;
@@ -27,7 +25,7 @@
 
 @synthesize alarm;
 @synthesize backgroundTime;
-@synthesize text;
+@synthesize originalTextColor;
 @synthesize startOfSwipe;
 @synthesize shouldBlink;
 
@@ -53,25 +51,25 @@
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    
+
 }
 
 #pragma mark - Actions
 
 - (IBAction)dismissView:(id)sender {
-     [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)changeTime:(UIGestureRecognizer *)sender {
-    UISwipeGestureRecognizer *gesture = (UISwipeGestureRecognizer*) sender;
-    CGPoint point = [gesture locationInView:self.view];
+    UIPanGestureRecognizer *gesture = (UIPanGestureRecognizer *) sender;
+    CGPoint current = [gesture locationInView:self.view];
     if (gesture.state == UIGestureRecognizerStateBegan) {
         shouldBlink = NO;
-        startOfSwipe = point;
+        startOfSwipe = current;
     }
 
-    BADTime* time = [BADTime timeFromString:alarm.text];
-    if (startOfSwipe.x < point.x) {
+    BADTime *time = [BADTime timeFromString:alarm.text];
+    if (self.startOfSwipe.x < current.x) {
         alarm.text = [[time decrease] string];
     } else {
         alarm.text = [[time increase] string];
@@ -82,7 +80,7 @@
 
 - (void)setupLabels {
     UIFont *font = [UIFont fontWithName:@"Digital-7 Mono" size:140.0];
-    text = alarm.textColor;
+    originalTextColor = alarm.textColor;
     backgroundTime.font = font;
     backgroundTime.text = @"88:88";
     alarm.font = font;
@@ -100,7 +98,7 @@
 }
 
 - (void)blinkOn {
-    alarm.textColor = text;
+    alarm.textColor = originalTextColor;
     [self.view sendSubviewToBack:backgroundTime];
     if (self.shouldBlink)
         [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(blinkOff) userInfo:nil repeats:NO];

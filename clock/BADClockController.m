@@ -30,17 +30,16 @@
 - (void)viewDidLoad {
     PSLog(@"");
     [super viewDidLoad];
-    UIFont *font = [UIFont fontWithName:@"Digital-7 Mono" size:150.0];
+    UIFont *font = [UIFont fontWithName:@"Digital-7 Mono" size:140.0];
+
     backgroundTime.text = @"88:88";
     backgroundTime.font = font;
     
-    PSLog(@"Height %f", time.frame.size.height);
     time.frame = CGRectMake(time.frame.origin.x, time.frame.origin.y, time.frame.size.width, 450);
-    PSLog(@"Height %f", time.frame.size.height);
     time.font = font;
+
     [self updateTime];
     [self scheduleScheduledTimeRefreshEvery:60 from:[NSDate date]];
-    PSLog(@"Height %f", time.frame.size.height);
 }
 
 #pragma mark - UI Updates

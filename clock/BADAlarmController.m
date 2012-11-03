@@ -13,6 +13,7 @@
 
 @property(nonatomic, retain) IBOutlet UILabel *alarm;
 @property(nonatomic, retain) IBOutlet UILabel *backgroundTime;
+@property(nonatomic, retain) UIColor *text;
 
 @end
 
@@ -21,6 +22,8 @@
 
 @synthesize alarm;
 @synthesize backgroundTime;
+@synthesize text;
+
 
 #pragma mark - Delegate methods
 
@@ -48,10 +51,25 @@
 
 - (void)setupLabels {
     UIFont *font = [UIFont fontWithName:@"Digital-7 Mono" size:140.0];
+    text = alarm.textColor;
     backgroundTime.font = font;
     backgroundTime.text = @"88:88";
     alarm.font = font;
     alarm.text = @"12:00";
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(blinkOff) userInfo:nil repeats:NO];
 }
+
+-(void)blinkOff {
+    alarm.textColor = UIColor.blackColor;
+    [self.view bringSubviewToFront:backgroundTime];
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(blinkOn) userInfo:nil repeats:NO];
+}
+
+-(void)blinkOn {
+    alarm.textColor = text;
+    [self.view sendSubviewToBack:backgroundTime];
+    [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(blinkOff) userInfo:nil repeats:NO];
+}
+
 
 @end

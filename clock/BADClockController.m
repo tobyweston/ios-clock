@@ -8,6 +8,7 @@
 
 #import "BADClockController.h"
 #import "BADAlarmController.h"
+#import "BADTime.h"
 #import "PSLog.h"
 
 @interface BADClockController ()
@@ -37,14 +38,14 @@
 #pragma mark - UI Updates
 
 - (void)updateTime {
-    NSString *now = [self currentTimeAsStringWithFormat:@"HH:mm"];
+    NSString *now = [[BADTime now] stringWithFormat:@"HH:mm"];
     PSLog(@"Updating time to %@", now);
     time.text = now;
 }
 
-#pragma mark - Information view
+#pragma mark - Alarm view
 
-- (IBAction)showInformationView:(UIButton *)sender {
+- (IBAction)showAlarmView:(UIButton *)sender {
     PSLog(@"");
     BADAlarmController *info = [[BADAlarmController alloc] initWithNibName:@"BADAlarmView" bundle:nil];
     [self presentViewController:info animated:YES completion:nil];
@@ -54,7 +55,7 @@
 #pragma mark - Time related methods
 
 - (void)scheduleScheduledTimeRefreshEvery:(NSTimeInterval)seconds from:(NSDate *)date {
-    double delay = seconds - [[self currentTimeAsStringWithFormat:@"ss"] doubleValue];
+    double delay = seconds - [[BADTime now] seconds];
     [self startScheduledTimeRefreshEvery:60 delayedBy:delay];
 }
 
@@ -72,12 +73,6 @@
 - (void)stopScheduledTimeRefresh {
     [timer invalidate];
     timer = nil;
-}
-
-- (NSString *)currentTimeAsStringWithFormat:(NSString *)format {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:format];
-    return [formatter stringFromDate:[NSDate date]];
 }
 
 #pragma mark - UI setup

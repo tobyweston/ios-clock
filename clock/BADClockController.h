@@ -14,6 +14,6 @@
 
 - (void)stopScheduledTimeRefresh;
 
-- (IBAction)showInformationView:(UIButton *)sender;
+- (IBAction)showAlarmView:(UIButton *)sender;
 
 @end

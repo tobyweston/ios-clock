@@ -28,6 +28,7 @@
 		DAB0CF5E1641A4C100A6A2DB /* BADAlarmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAB0CF5C1641A4C100A6A2DB /* BADAlarmView.xib */; };
 		DAB0CF7B1643045B00A6A2DB /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAB0CF7A1643045B00A6A2DB /* digital-7.ttf */; };
 		DAB7A28B16415FD000A04F75 /* ds-digital.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAB7A28A16415FD000A04F75 /* ds-digital.ttf */; };
+		DAED8EC6164552FC00572EEE /* BADTime.m in Sources */ = {isa = PBXBuildFile; fileRef = DAED8EC5164552FC00572EEE /* BADTime.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		DAB0CF5C1641A4C100A6A2DB /* BADAlarmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BADAlarmView.xib; sourceTree = "<group>"; };
 		DAB0CF7A1643045B00A6A2DB /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
 		DAB7A28A16415FD000A04F75 /* ds-digital.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ds-digital.ttf"; sourceTree = "<group>"; };
+		DAED8EC4164552FC00572EEE /* BADTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADTime.h; sourceTree = "<group>"; };
+		DAED8EC5164552FC00572EEE /* BADTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADTime.m; sourceTree = "<group>"; };
 		DAF2060F16410C7700AA989A /* PSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSLog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +143,7 @@
 		DAAFA3051639B9A700ACBF03 /* clock */ = {
 			isa = PBXGroup;
 			children = (
+				DAED8EC81645530400572EEE /* Objects */,
 				DAB0CF741642AD0900A6A2DB /* View */,
 				DAA3F5D216405C620091E41B /* Controllers */,
 				DAAFA30E1639B9A700ACBF03 /* BADAppDelegate.h */,
@@ -193,6 +197,15 @@
 				DAB0CF5C1641A4C100A6A2DB /* BADAlarmView.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		DAED8EC81645530400572EEE /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				DAED8EC4164552FC00572EEE /* BADTime.h */,
+				DAED8EC5164552FC00572EEE /* BADTime.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +327,7 @@
 				DAAFA3101639B9A700ACBF03 /* BADAppDelegate.m in Sources */,
 				DAAFA3191639B9A700ACBF03 /* BADClockController.m in Sources */,
 				DAB0CF5D1641A4C100A6A2DB /* BADAlarmController.m in Sources */,
+				DAED8EC6164552FC00572EEE /* BADTime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

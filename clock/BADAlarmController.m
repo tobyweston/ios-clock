@@ -11,9 +11,11 @@
 
 @interface BADAlarmController ()
 
+@property(nonatomic, retain) IBOutlet UISwipeGestureRecognizer *swipeRecognizer;
 @property(nonatomic, retain) IBOutlet UILabel *alarm;
 @property(nonatomic, retain) IBOutlet UILabel *backgroundTime;
 @property(nonatomic, retain) UIColor *text;
+@property(nonatomic) CGPoint startOfSwipe;
 
 @end
 
@@ -23,6 +25,7 @@
 @synthesize alarm;
 @synthesize backgroundTime;
 @synthesize text;
+@synthesize startOfSwipe;
 
 
 #pragma mark - Delegate methods
@@ -36,7 +39,6 @@
 }
 
 -(void)viewDidLoad {
-    PSLog(@"");
     [super viewDidLoad];
     [self setupLabels];
 }
@@ -45,6 +47,17 @@
 
 - (IBAction)dismissView:(id)sender {
      [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)changeTime:(UIGestureRecognizer *)sender {
+    UISwipeGestureRecognizer *gesture = (UISwipeGestureRecognizer*) sender;
+    CGPoint point = [gesture locationInView:self.view];
+    if (gesture.state == UIGestureRecognizerStateBegan)
+        startOfSwipe = point;
+    if (startOfSwipe.x < point.x)
+        NSLog(@">");
+    else
+        NSLog(@"<");
 }
 
 #pragma mark - UI setup
@@ -70,6 +83,5 @@
     [self.view sendSubviewToBack:backgroundTime];
     [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(blinkOff) userInfo:nil repeats:NO];
 }
-
 
 @end

@@ -28,16 +28,8 @@
 #pragma mark - Delegate methods
 
 - (void)viewDidLoad {
-    PSLog(@"");
     [super viewDidLoad];
-    UIFont *font = [UIFont fontWithName:@"Digital-7 Mono" size:140.0];
-
-    backgroundTime.text = @"88:88";
-    backgroundTime.font = font;
-    
-    time.frame = CGRectMake(time.frame.origin.x, time.frame.origin.y, time.frame.size.width, 450);
-    time.font = font;
-
+    [self setupLabels];
     [self updateTime];
     [self scheduleScheduledTimeRefreshEvery:60 from:[NSDate date]];
 }
@@ -86,6 +78,15 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:format];
     return [formatter stringFromDate:[NSDate date]];
+}
+
+#pragma mark - UI setup
+
+- (void)setupLabels {
+    UIFont *font = [UIFont fontWithName:@"Digital-7 Mono" size:140.0];
+    backgroundTime.text = @"88:88";
+    backgroundTime.font = font;
+    time.font = font;
 }
 
 @end

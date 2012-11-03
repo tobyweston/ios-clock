@@ -12,9 +12,16 @@
 
 + (BADTime*)now;
 
++ (BADTime*)timeFromString:(NSString*) string;
+
+
 - (BADTime*)initWithTime:(NSDate*) time;
 
-- (NSString*)stringWithFormat:(NSString*) format;
+- (BADTime*)increase;
+
+- (BADTime*)decrease;
+
+- (NSString*)string;
 
 - (double) seconds;
 

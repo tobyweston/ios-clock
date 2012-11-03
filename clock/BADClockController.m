@@ -38,7 +38,7 @@
 #pragma mark - UI Updates
 
 - (void)updateTime {
-    NSString *now = [[BADTime now] stringWithFormat:@"HH:mm"];
+    NSString *now = [[BADTime now] string];
     PSLog(@"Updating time to %@", now);
     time.text = now;
 }

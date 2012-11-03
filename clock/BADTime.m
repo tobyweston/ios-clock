@@ -19,9 +19,19 @@
 
 @synthesize time;
 
+#pragma mark - Static initialisers
+
 + (BADTime*)now {
     return [[BADTime alloc] initWithTime:[NSDate date]];
 }
+
++ (BADTime*)timeFromString:(NSString *)colonSeperatedHoursAndMinutes {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm"];
+    return [[BADTime alloc] initWithTime:[formatter dateFromString:colonSeperatedHoursAndMinutes]];
+}
+
+#pragma mark - Initialisers
 
 - (BADTime*)initWithTime:(NSDate*) t {
     self = [super init];
@@ -31,10 +41,28 @@
     return self;
 }
 
+#pragma mark - Time manipulation
+
+- (BADTime*)increase {
+    time = [time dateByAddingTimeInterval:60];
+    return self;
+}
+
+- (BADTime*)decrease {
+    time = [time dateByAddingTimeInterval:-60];
+    return self;
+}
+
+#pragma mark - Getters
+
 - (NSString*)stringWithFormat:(NSString *)format {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:format];
     return [formatter stringFromDate:self.time];
+}
+
+- (NSString*)string {
+    return [self stringWithFormat:@"HH:mm"];
 }
 
 - (double)seconds {

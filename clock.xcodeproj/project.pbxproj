@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DAA3F5DD16406BF50091E41B /* clock.png in Resources */ = {isa = PBXBuildFile; fileRef = DAA3F5DC16406BF50091E41B /* clock.png */; };
 		DAAFA3001639B9A700ACBF03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA2FF1639B9A700ACBF03 /* UIKit.framework */; };
 		DAAFA3021639B9A700ACBF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3011639B9A700ACBF03 /* Foundation.framework */; };
 		DAAFA3041639B9A700ACBF03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3031639B9A700ACBF03 /* CoreGraphics.framework */; };
@@ -42,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DAA3F5DC16406BF50091E41B /* clock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clock.png; sourceTree = SOURCE_ROOT; };
 		DAAFA2FB1639B9A700ACBF03 /* clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAFA2FF1639B9A700ACBF03 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DAAFA3011639B9A700ACBF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,6 +97,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA04458A164BE61600136DB9 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		DAA3F5D216405C620091E41B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +148,7 @@
 		DAAFA3051639B9A700ACBF03 /* clock */ = {
 			isa = PBXGroup;
 			children = (
+				DA04458A164BE61600136DB9 /* Libraries */,
 				DAED8EC81645530400572EEE /* Objects */,
 				DAB0CF741642AD0900A6A2DB /* View */,
 				DAA3F5D216405C620091E41B /* Controllers */,
@@ -159,7 +165,6 @@
 				DAB0CF7A1643045B00A6A2DB /* digital-7.ttf */,
 				DAB7A28A16415FD000A04F75 /* ds-digital.ttf */,
 				DAF2060F16410C7700AA989A /* PSLog.h */,
-				DAA3F5DC16406BF50091E41B /* clock.png */,
 				DAAFA3071639B9A700ACBF03 /* clock-Info.plist */,
 				DAAFA3081639B9A700ACBF03 /* InfoPlist.strings */,
 				DAAFA30B1639B9A700ACBF03 /* main.m */,
@@ -285,7 +290,6 @@
 				DAAFA3141639B9A700ACBF03 /* Default@2x.png in Resources */,
 				DAAFA3161639B9A700ACBF03 /* Default-568h@2x.png in Resources */,
 				DAAFA31C1639B9A700ACBF03 /* BADClockView.xib in Resources */,
-				DAA3F5DD16406BF50091E41B /* clock.png in Resources */,
 				DAB7A28B16415FD000A04F75 /* ds-digital.ttf in Resources */,
 				DAB0CF5E1641A4C100A6A2DB /* BADAlarmView.xib in Resources */,
 				DAB0CF7B1643045B00A6A2DB /* digital-7.ttf in Resources */,
@@ -433,6 +437,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "clock/clock-Prefix.pch";
 				INFOPLIST_FILE = "clock/clock-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -444,6 +452,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "clock/clock-Prefix.pch";
 				INFOPLIST_FILE = "clock/clock-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

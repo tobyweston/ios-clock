@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BADAlarmController : UIViewController
+@interface BADAlarmController : UIViewController <UIGestureRecognizerDelegate>
 
 - (IBAction)dismissView:(id)sender;
 

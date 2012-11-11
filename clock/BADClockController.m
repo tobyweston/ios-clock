@@ -8,6 +8,7 @@
 
 #import "BADClockController.h"
 #import "BADAlarmController.h"
+#import "BADAppDelegate.h"
 #import "BADTime.h"
 #import "PSLog.h"
 
@@ -78,7 +79,7 @@
 #pragma mark - UI setup
 
 - (void)setupLabels {
-    UIFont *font = [UIFont fontWithName:@"Digital-7 Mono" size:140.0];
+    UIFont *font = [UIFont fontWithName:kDigitalFont size:140.0];
     backgroundTime.text = @"88:88";
     backgroundTime.font = font;
     time.font = font;

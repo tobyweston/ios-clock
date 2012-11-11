@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA4D506C164FF05700112363 /* digitalk-mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA4D506B164FF05700112363 /* digitalk-mono.ttf */; };
 		DAAFA3001639B9A700ACBF03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA2FF1639B9A700ACBF03 /* UIKit.framework */; };
 		DAAFA3021639B9A700ACBF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3011639B9A700ACBF03 /* Foundation.framework */; };
 		DAAFA3041639B9A700ACBF03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3031639B9A700ACBF03 /* CoreGraphics.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA4D506B164FF05700112363 /* digitalk-mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digitalk-mono.ttf"; sourceTree = "<group>"; };
 		DAAFA2FB1639B9A700ACBF03 /* clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAFA2FF1639B9A700ACBF03 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DAAFA3011639B9A700ACBF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -162,6 +164,7 @@
 		DAAFA3061639B9A700ACBF03 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA4D506B164FF05700112363 /* digitalk-mono.ttf */,
 				DAB0CF7A1643045B00A6A2DB /* digital-7.ttf */,
 				DAB7A28A16415FD000A04F75 /* ds-digital.ttf */,
 				DAF2060F16410C7700AA989A /* PSLog.h */,
@@ -293,6 +296,7 @@
 				DAB7A28B16415FD000A04F75 /* ds-digital.ttf in Resources */,
 				DAB0CF5E1641A4C100A6A2DB /* BADAlarmView.xib in Resources */,
 				DAB0CF7B1643045B00A6A2DB /* digital-7.ttf in Resources */,
+				DA4D506C164FF05700112363 /* digitalk-mono.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define kDigitalFont @"digitalk-mono"
+
+
 @class BADClockController;
 
 @interface BADAppDelegate : UIResponder <UIApplicationDelegate>

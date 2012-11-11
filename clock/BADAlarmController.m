@@ -8,6 +8,7 @@
 
 #import "BADAlarmController.h"
 #import "BADTime.h"
+#import "BADAppDelegate.h"
 
 @interface BADAlarmController ()
 
@@ -64,7 +65,7 @@
 #pragma mark - UI setup
 
 - (void)setupLabels {
-    UIFont *font = [UIFont fontWithName:@"Digital-7 Mono" size:140.0];
+    UIFont *font = [UIFont fontWithName:kDigitalFont size:140.0];
     originalTextColor = alarm.textColor;
     backgroundTime.font = font;
     backgroundTime.text = @"88:88";

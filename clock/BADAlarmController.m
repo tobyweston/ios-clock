@@ -9,6 +9,7 @@
 #import "BADAlarmController.h"
 #import "BADTime.h"
 #import "BADAppDelegate.h"
+#import "BADHoldGestureRegonizer.h"
 
 @interface BADAlarmController ()
 
@@ -91,18 +92,13 @@
 }
 
 - (void)setupGestures {
-    UIPanGestureRecognizer *swipe = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(changeTime:)];
-    [swipe setDelegate:self];
-    [self.view addGestureRecognizer:swipe];
+    UIPanGestureRecognizer *swipeGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(changeTime:)];
+    [swipeGesture setDelegate:self];
+    [self.view addGestureRecognizer:swipeGesture];
     
-//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(changeTimeFast:)];
-//    [tap setDelegate:self];
-//    [self.view addGestureRecognizer:tap];
-    
-    UILongPressGestureRecognizer *longTap = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(changeTimeFast:)];
-    [longTap setDelegate:self];
-//    [longTap setMinimumPressDuration:1];
-    [self.view addGestureRecognizer:longTap];
+    BADHoldGestureRegonizer *holdGesture = [[BADHoldGestureRegonizer alloc] initWithTarget:self action:@selector(changeTimeFast:)];
+    [holdGesture setDelegate:self];
+    [self.view addGestureRecognizer:holdGesture];
 }
 
 #pragma mark - Gesture delegates
@@ -127,10 +123,11 @@
     } else {
         alarm.text = [[time increase] string];
     }
-    NSLog(@".");
+//    NSLog(@".");
 }
 
 - (void)changeTimeFast:(UIGestureRecognizer *)sender {
-    NSLog(@"Long tap detected");
+    BADHoldGestureRegonizer *gesture = (BADHoldGestureRegonizer *) sender;
+    NSLog(@"Hold detected");
 }
 @end

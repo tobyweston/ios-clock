@@ -23,6 +23,6 @@
 
 - (NSString*)string;
 
-- (double) seconds;
+- (double)seconds;
 
 @end

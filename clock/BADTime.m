@@ -16,9 +16,8 @@
 
 @property(nonatomic, retain) NSDate *time;
 
-- (BOOL)singleDigitHour;
-
 - (double)hours;
+- (BOOL)singleDigitHour;
 
 @end
 
@@ -74,22 +73,19 @@
 
 - (NSString*)string {
     if ([self singleDigitHour]) {
-        NSString *currentTime = [self stringWithFormat:kTwelveHourClock];
-        if (currentTime != nil) {
-            NSMutableString* padding = [NSMutableString stringWithString: @"   "];
-            [padding appendString: currentTime];
-            return padding;
-        }
+        NSMutableString* padding = [NSMutableString stringWithString: @"   "];
+        [padding appendString: [self stringWithFormat:kTwelveHourClock]];
+        return padding;
     }
     return [self stringWithFormat:kTwentyFourHourClock];
 }
 
-- (double)seconds {
-    return [[[[BADTime alloc] initWithTime:self.time] stringWithFormat:@"ss"] doubleValue];
-}
-
 - (double)hours {
     return [[[[BADTime alloc] initWithTime:self.time] stringWithFormat:@"HH"] doubleValue];
+}
+
+- (double)seconds {
+    return [[[[BADTime alloc] initWithTime:self.time] stringWithFormat:@"ss"] doubleValue];
 }
 
 - (BOOL)singleDigitHour {

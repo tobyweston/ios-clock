@@ -8,6 +8,10 @@
 
 #import "BADTime.h"
 
+#define kTwentyFourHourClock @"HH:mm"
+#define kTwelveHourClock     @"h:mm"
+
+
 @interface BADTime ()
 
 @property(nonatomic, retain) NSDate *time;
@@ -27,7 +31,7 @@
 
 + (BADTime*)timeFromString:(NSString *)colonSeperatedHoursAndMinutes {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"HH:mm"];
+    [formatter setDateFormat:kTwentyFourHourClock];
     return [[BADTime alloc] initWithTime:[formatter dateFromString:colonSeperatedHoursAndMinutes]];
 }
 
@@ -43,13 +47,13 @@
 
 #pragma mark - Time manipulation
 
-- (BADTime*)increase {
-    time = [time dateByAddingTimeInterval:60];
+- (BADTime*)increaseBy:(NSTimeInterval) interval {
+    time = [time dateByAddingTimeInterval:interval * -1];
     return self;
 }
 
-- (BADTime*)decrease {
-    time = [time dateByAddingTimeInterval:-60];
+- (BADTime*)decreaseBy:(NSTimeInterval) interval {
+    time = [time dateByAddingTimeInterval:interval];
     return self;
 }
 
@@ -62,7 +66,7 @@
 }
 
 - (NSString*)string {
-    return [self stringWithFormat:@"HH:mm"];
+    return [self stringWithFormat:kTwentyFourHourClock];
 }
 
 - (double)seconds {

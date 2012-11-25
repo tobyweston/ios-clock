@@ -119,15 +119,20 @@
     
     BADTime *time = [BADTime timeFromString:alarm.text];
     if (self.startOfSwipe.x < current.x) {
-        alarm.text = [[time decrease] string];
+        alarm.text = [[time decreaseBy:60] string];
     } else {
-        alarm.text = [[time increase] string];
+        alarm.text = [[time increaseBy:60] string];
     }
-//    NSLog(@".");
 }
 
 - (void)changeTimeFast:(UIGestureRecognizer *)sender {
     BADHoldGestureRegonizer *gesture = (BADHoldGestureRegonizer *) sender;
-    NSLog(@"Hold detected");
+    CGPoint current = [gesture locationInView:self.view];
+    BADTime *time = [BADTime timeFromString:alarm.text];
+    if (self.startOfSwipe.x < current.x) {
+        alarm.text = [[time decreaseBy:300] string];
+    } else {
+        alarm.text = [[time increaseBy:300] string];
+    }
 }
 @end

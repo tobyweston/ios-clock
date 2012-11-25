@@ -17,9 +17,9 @@
 
 - (BADTime*)initWithTime:(NSDate*) time;
 
-- (BADTime*)increase;
+- (BADTime*)increaseBy:(NSTimeInterval) interval;
 
-- (BADTime*)decrease;
+- (BADTime*)decreaseBy:(NSTimeInterval) interval;
 
 - (NSString*)string;
 

@@ -49,19 +49,6 @@
 }
 
 
-#pragma mark - Checks
-
-- (void)holdEventFired:(NSTimer *)timer {
-    NSLog(@"should I fire?");
-    if (timer == holdTimer) {
-        NSLog(@"hold event fired");
-        self.state = UIGestureRecognizerStateBegan;
-        [timer invalidate];
-        self.holdTimer = nil;
-        [self startFiringEvents];
-    }
-}
-
 #pragma mark - Gesture methods
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -102,24 +89,31 @@
 }
 
 
-#pragma mark - Target action methods
+#pragma mark - Event methods and target actions
+
+- (void)holdEventFired:(NSTimer *)timer {
+    if (timer == holdTimer) {
+        self.state = UIGestureRecognizerStateBegan;
+        [timer invalidate];
+        self.holdTimer = nil;
+        [self startFiringEvents];
+    }
+}
 
 - (void)startFiringEvents {
     if (eventTimer == nil) {
-        NSLog(@"Staring events...");
         BADHoldGestureRegonizer *gesturer = self;
         NSMethodSignature *signature = [[target class] instanceMethodSignatureForSelector:action];
         NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
         [invocation setSelector:action];
         [invocation setTarget:target];
         [invocation setArgument:&gesturer atIndex:2];
-        eventTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 invocation:invocation repeats:YES];
+        eventTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 invocation:invocation repeats:YES];
     }
 }
 
 - (void)stopFiringEvents {
     if (eventTimer != nil) {
-        NSLog(@"Stopping events...");
         [eventTimer invalidate];
     }
     eventTimer = nil;

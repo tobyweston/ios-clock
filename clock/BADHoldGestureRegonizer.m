@@ -73,7 +73,6 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"End");
     [super touchesEnded:touches withEvent:event];
     [self stopFiringEvents];
     [self resetTimer];
@@ -81,7 +80,6 @@
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-    NSLog(@"Canceled");
     [super touchesCancelled:touches withEvent:event];
     [self stopFiringEvents];
     [self resetTimer];

@@ -15,7 +15,11 @@
 @interface BADTime ()
 
 @property(nonatomic, retain) NSDate *time;
-    
+
+- (BOOL)singleDigitHour;
+
+- (double)hours;
+
 @end
 
 
@@ -35,6 +39,7 @@
     return [[BADTime alloc] initWithTime:[formatter dateFromString:colonSeperatedHoursAndMinutes]];
 }
 
+
 #pragma mark - Initialisers
 
 - (BADTime*)initWithTime:(NSDate*) t {
@@ -44,6 +49,7 @@
     }
     return self;
 }
+
 
 #pragma mark - Time manipulation
 
@@ -57,6 +63,7 @@
     return self;
 }
 
+
 #pragma mark - Getters
 
 - (NSString*)stringWithFormat:(NSString *)format {
@@ -66,11 +73,27 @@
 }
 
 - (NSString*)string {
+    if ([self singleDigitHour]) {
+        NSString *currentTime = [self stringWithFormat:kTwelveHourClock];
+        if (currentTime != nil) {
+            NSMutableString* padding = [NSMutableString stringWithString: @"   "];
+            [padding appendString: currentTime];
+            return padding;
+        }
+    }
     return [self stringWithFormat:kTwentyFourHourClock];
 }
 
 - (double)seconds {
-    return [[[BADTime now] stringWithFormat:@"ss"] doubleValue];
+    return [[[[BADTime alloc] initWithTime:self.time] stringWithFormat:@"ss"] doubleValue];
+}
+
+- (double)hours {
+    return [[[[BADTime alloc] initWithTime:self.time] stringWithFormat:@"HH"] doubleValue];
+}
+
+- (BOOL)singleDigitHour {
+    return [self hours] <= 9;
 }
 
 @end

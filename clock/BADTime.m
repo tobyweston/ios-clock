@@ -9,7 +9,7 @@
 #import "BADTime.h"
 
 #define kTwentyFourHourClock @"HH:mm"
-#define kTwelveHourClock     @"h:mm"
+#define kTwelveHourClock     @"   h:mm"
 
 
 @interface BADTime ()
@@ -72,11 +72,8 @@
 }
 
 - (NSString*)string {
-    if ([self singleDigitHour]) {
-        NSMutableString* padding = [NSMutableString stringWithString: @"   "];
-        [padding appendString: [self stringWithFormat:kTwelveHourClock]];
-        return padding;
-    }
+    if ([self singleDigitHour]) 
+        return [self stringWithFormat:kTwelveHourClock];
     return [self stringWithFormat:kTwentyFourHourClock];
 }
 

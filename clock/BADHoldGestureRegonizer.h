@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BADHoldGestureRegonizer : UIGestureRecognizer
+@interface BADHoldGestureRegonizer : UIPanGestureRecognizer
 
 @property (nonatomic) CFTimeInterval minimumPressDuration;
 
+- (id)initWithTarget:(id)theTarget panAction:(SEL)thePanAction andHoldAction:(SEL)theHoldAction;
 - (void)reset;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;

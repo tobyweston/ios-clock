@@ -39,10 +39,10 @@
     return self;
 }
 
-- (id)initWithTarget:(id)theTarget action:(SEL)theAction {
-    if (self = [super initWithTarget:theTarget action:theAction]) {
+- (id)initWithTarget:(id)theTarget panAction:(SEL)thePanAction andHoldAction:(SEL)theHoldAction {
+    if (self = [super initWithTarget:theTarget action:thePanAction]) {
         self.target = theTarget;
-        self.action = theAction;
+        self.action = theHoldAction;
         self.minimumPressDuration = kMinimumPressDuration;
     }
     return self;

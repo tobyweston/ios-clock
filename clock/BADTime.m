@@ -30,8 +30,11 @@
 }
 
 + (BADTime*)timeFromString:(NSString *)colonSeperatedHoursAndMinutes {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:kTwentyFourHourClock];
+    static NSDateFormatter *formatter = nil;
+    if (formatter == nil) {
+        formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:kTwentyFourHourClock];
+    }
     return [[BADTime alloc] initWithTime:[formatter dateFromString:colonSeperatedHoursAndMinutes]];
 }
 

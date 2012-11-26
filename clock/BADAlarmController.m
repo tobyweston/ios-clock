@@ -20,6 +20,7 @@
 @property(nonatomic, retain) IBOutlet UILabel *alarm;
 @property(nonatomic, retain) IBOutlet UILabel *backgroundTime;
 @property(nonatomic, retain) UIColor *originalTextColor;
+@property (weak, nonatomic) IBOutlet UIButton *setAlarmButton;
 
 @property(nonatomic) CGPoint startOfSwipe;
 @property(nonatomic) BOOL shouldBlink;
@@ -30,6 +31,7 @@
 @implementation BADAlarmController
 
 @synthesize alarm;
+@synthesize setAlarmButton;
 @synthesize backgroundTime;
 @synthesize originalTextColor;
 @synthesize startOfSwipe;
@@ -48,7 +50,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupLabels];
+    [self setupLabelsAndButton];
     [self setupGestures];
 }
 
@@ -69,13 +71,16 @@
 
 #pragma mark - UI setup
 
-- (void)setupLabels {
+- (void)setupLabelsAndButton {
     UIFont *font = [UIFont fontWithName:kDigitalFont size:140.0];
     originalTextColor = alarm.textColor;
     backgroundTime.font = font;
     backgroundTime.text = @"88:88";
     alarm.font = font;
     alarm.text = @"12:00";
+    setAlarmButton.titleLabel.font = [UIFont fontWithName:kDigitalFontAlternative size:22];
+    setAlarmButton.titleLabel.textColor = originalTextColor;
+    setAlarmButton.titleLabel.text = @"Set";
 }
 
 - (void)startBlinking {

@@ -39,15 +39,12 @@
 #pragma mark - UI Updates
 
 - (void)updateTime {
-    NSString *now = [[BADTime now] string];
-    PSLog(@"Updating time to %@", now);
-    time.text = now;
+    time.text = [[BADTime now] string];
 }
 
 #pragma mark - Alarm view
 
 - (IBAction)showAlarmView:(UIButton *)sender {
-    PSLog(@"");
     BADAlarmController *info = [[BADAlarmController alloc] initWithNibName:@"BADAlarmView" bundle:nil];
     [self presentViewController:info animated:YES completion:nil];
 }

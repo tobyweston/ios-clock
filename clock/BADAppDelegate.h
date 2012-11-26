@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 #define kDigitalFont @"digitalk-mono"
+#define kDigitalFontNotWorking @"Digital-7 Mono"
+#define kDigitalFontAlternative @"DS-Digital"
 
 
 @class BADClockController;

@@ -20,7 +20,6 @@
 @property(nonatomic, retain) IBOutlet UILabel *alarm;
 @property(nonatomic, retain) IBOutlet UILabel *backgroundTime;
 @property(nonatomic, retain) UIColor *originalTextColor;
-@property(nonatomic, retain) BADHoldGestureRegonizer *gesture;
 
 @property(nonatomic) CGPoint startOfSwipe;
 @property(nonatomic) BOOL shouldBlink;
@@ -35,7 +34,6 @@
 @synthesize originalTextColor;
 @synthesize startOfSwipe;
 @synthesize shouldBlink;
-@synthesize gesture;
 
 
 #pragma mark - Delegate methods
@@ -98,7 +96,7 @@
 }
 
 - (void)setupGestures {
-    gesture = [[BADHoldGestureRegonizer alloc] initWithTarget:self panAction:@selector(changeTime:) andHoldAction:@selector(changeTimeFast:)];
+    BADHoldGestureRegonizer *gesture = [[BADHoldGestureRegonizer alloc] initWithTarget:self panAction:@selector(changeTime:) andHoldAction:@selector(changeTimeFast:)];
     [gesture setDelegate:self];
     [self.view addGestureRecognizer:gesture];
 }
@@ -112,6 +110,7 @@
 #pragma mark - Alarm methods
 
 - (void)changeTime:(UIGestureRecognizer *)sender {
+    BADHoldGestureRegonizer *gesture = (BADHoldGestureRegonizer*) sender;
     if (gesture.state == UIGestureRecognizerStateBegan)
         shouldBlink = NO;
     
@@ -123,6 +122,7 @@
 }
 
 - (void)changeTimeFast:(UIGestureRecognizer *)sender {
+    BADHoldGestureRegonizer *gesture = (BADHoldGestureRegonizer*) sender;
     BADTime *time = [BADTime timeFromString:alarm.text];
     if ([gesture directionInView:self.view] == UISwipeGestureRecognizerDirectionLeft)
         alarm.text = [[time decreaseBy:kFiveMinutes] string];

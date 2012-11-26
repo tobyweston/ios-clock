@@ -104,7 +104,7 @@
 #pragma mark - Gesture delegates
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-     return YES;
+     return NO;
 }
 
 #pragma mark - Alarm methods

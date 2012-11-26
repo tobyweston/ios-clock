@@ -96,7 +96,7 @@
 }
 
 - (void)setupGestures {
-    BADHoldGestureRegonizer *gesture = [[BADHoldGestureRegonizer alloc] initWithTarget:self panAction:@selector(changeTime:) andHoldAction:@selector(changeTimeFast:)];
+    BADHoldGestureRegonizer *gesture = [[BADHoldGestureRegonizer alloc] initWithTarget:self panAction:@selector(changeTime:) andHoldAction:@selector(changeTime:)];
     [gesture setDelegate:self];
     [self.view addGestureRecognizer:gesture];
 }
@@ -121,12 +121,4 @@
         alarm.text = [[time increaseBy:kOneMinute] string];
 }
 
-- (void)changeTimeFast:(UIGestureRecognizer *)sender {
-    BADHoldGestureRegonizer *gesture = (BADHoldGestureRegonizer*) sender;
-    BADTime *time = [BADTime timeFromString:alarm.text];
-    if ([gesture directionInView:self.view] == UISwipeGestureRecognizerDirectionLeft)
-        alarm.text = [[time decreaseBy:kFiveMinutes] string];
-    else
-        alarm.text = [[time increaseBy:kFiveMinutes] string];
-}
 @end

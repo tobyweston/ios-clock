@@ -53,10 +53,8 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
-    NSLog(@"Begin");
     if ([touches count] != 1 || [[touches anyObject] tapCount] > 1) {
         self.state = UIGestureRecognizerStateFailed;
-        NSLog(@"Failed");
         return;
     }
     NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:self.minimumPressDuration target:self selector:@selector(holdEventFired:) userInfo:nil repeats:NO];
@@ -68,7 +66,6 @@
     [super touchesMoved:touches withEvent:event];
     if (self.state == UIGestureRecognizerStateFailed)
          return;
-    // capture direction
     self.state = UIGestureRecognizerStatePossible;
 }
 

@@ -11,18 +11,13 @@
 @interface BADTime : NSObject
 
 + (BADTime*)now;
-
 + (BADTime*)timeFromString:(NSString*) string;
 
 
 - (BADTime*)initWithTime:(NSDate*) time;
-
 - (BADTime*)increaseBy:(NSTimeInterval) interval;
-
 - (BADTime*)decreaseBy:(NSTimeInterval) interval;
-
 - (NSString*)string;
-
 - (double)seconds;
 
 @end

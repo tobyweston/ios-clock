@@ -10,12 +10,14 @@
 #import "BADTime.h"
 #import "BADAppDelegate.h"
 #import "BADHoldGestureRegonizer.h"
+#import "UIPanGestureRecognizer+DirectionalUIGesture.h"
 
 @interface BADAlarmController ()
 
 @property(nonatomic, retain) IBOutlet UILabel *alarm;
 @property(nonatomic, retain) IBOutlet UILabel *backgroundTime;
 @property(nonatomic, retain) UIColor *originalTextColor;
+@property(nonatomic, retain) UIPanGestureRecognizer *swipeGesture;
 
 @property(nonatomic) CGPoint startOfSwipe;
 @property(nonatomic) BOOL shouldBlink;
@@ -30,6 +32,7 @@
 @synthesize originalTextColor;
 @synthesize startOfSwipe;
 @synthesize shouldBlink;
+@synthesize swipeGesture;
 
 
 #pragma mark - Delegate methods
@@ -92,10 +95,10 @@
 }
 
 - (void)setupGestures {
-    UIPanGestureRecognizer *swipeGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(changeTime:)];
+    swipeGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(changeTime:)];
     [swipeGesture setDelegate:self];
     [self.view addGestureRecognizer:swipeGesture];
-    
+
     BADHoldGestureRegonizer *holdGesture = [[BADHoldGestureRegonizer alloc] initWithTarget:self action:@selector(changeTimeFast:)];
     [holdGesture setDelegate:self];
     [self.view addGestureRecognizer:holdGesture];
@@ -110,29 +113,23 @@
 #pragma mark - Alarm methods
 
 - (void)changeTime:(UIGestureRecognizer *)sender {
-    UIPanGestureRecognizer *gesture = (UIPanGestureRecognizer *) sender;
-    CGPoint current = [gesture locationInView:self.view];
-    if (gesture.state == UIGestureRecognizerStateBegan) {
+    if (sender != swipeGesture)
+        return;
+    if (swipeGesture.state == UIGestureRecognizerStateBegan)
         shouldBlink = NO;
-        startOfSwipe = current;
-    }
     
     BADTime *time = [BADTime timeFromString:alarm.text];
-    if (self.startOfSwipe.x < current.x) {
+    if ([swipeGesture directionInView:self.view] == UISwipeGestureRecognizerDirectionLeft) 
         alarm.text = [[time decreaseBy:60] string];
-    } else {
+    else 
         alarm.text = [[time increaseBy:60] string];
-    }
 }
 
 - (void)changeTimeFast:(UIGestureRecognizer *)sender {
-    BADHoldGestureRegonizer *gesture = (BADHoldGestureRegonizer *) sender;
-    CGPoint current = [gesture locationInView:self.view];
     BADTime *time = [BADTime timeFromString:alarm.text];
-    if (self.startOfSwipe.x < current.x) {
+    if ([swipeGesture directionInView:self.view] == UISwipeGestureRecognizerDirectionLeft)
         alarm.text = [[time decreaseBy:300] string];
-    } else {
+    else
         alarm.text = [[time increaseBy:300] string];
-    }
 }
 @end

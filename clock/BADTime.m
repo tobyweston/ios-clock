@@ -9,15 +9,12 @@
 #import "BADTime.h"
 
 #define kTwentyFourHourClock @"HH:mm"
-#define kTwelveHourClock     @"   h:mm"
+#define kTwelveHourClock     @"h:mm a"
 
 
 @interface BADTime ()
 
 @property(nonatomic, retain) NSDate *time;
-
-- (double)hours;
-- (BOOL)singleDigitHour;
 
 @end
 
@@ -72,21 +69,11 @@
 }
 
 - (NSString*)string {
-    if ([self singleDigitHour]) 
-        return [self stringWithFormat:kTwelveHourClock];
     return [self stringWithFormat:kTwentyFourHourClock];
-}
-
-- (double)hours {
-    return [[[[BADTime alloc] initWithTime:self.time] stringWithFormat:@"HH"] doubleValue];
 }
 
 - (double)seconds {
     return [[[[BADTime alloc] initWithTime:self.time] stringWithFormat:@"ss"] doubleValue];
-}
-
-- (BOOL)singleDigitHour {
-    return [self hours] <= 9;
 }
 
 @end

@@ -11,9 +11,7 @@
 @interface BADClockController : UIViewController
 
 - (void)scheduleScheduledTimeRefreshEvery:(NSTimeInterval)seconds from:(NSDate *)date;
-
 - (void)stopScheduledTimeRefresh;
-
 - (IBAction)showAlarmView:(UIButton *)sender;
 
 @end

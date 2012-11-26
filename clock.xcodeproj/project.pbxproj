@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DA4D506C164FF05700112363 /* digitalk-mono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA4D506B164FF05700112363 /* digitalk-mono.ttf */; };
 		DA4D5070164FF66B00112363 /* BADHoldGestureRegonizer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA4D506F164FF66B00112363 /* BADHoldGestureRegonizer.m */; };
+		DA58FAAA16629131003C6434 /* UIPanGestureRecognizer+DirectionalUIGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = DA58FAA916629131003C6434 /* UIPanGestureRecognizer+DirectionalUIGesture.m */; };
 		DAAFA3001639B9A700ACBF03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA2FF1639B9A700ACBF03 /* UIKit.framework */; };
 		DAAFA3021639B9A700ACBF03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3011639B9A700ACBF03 /* Foundation.framework */; };
 		DAAFA3041639B9A700ACBF03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAFA3031639B9A700ACBF03 /* CoreGraphics.framework */; };
@@ -46,6 +47,8 @@
 		DA4D506B164FF05700112363 /* digitalk-mono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digitalk-mono.ttf"; sourceTree = "<group>"; };
 		DA4D506E164FF66B00112363 /* BADHoldGestureRegonizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BADHoldGestureRegonizer.h; sourceTree = "<group>"; };
 		DA4D506F164FF66B00112363 /* BADHoldGestureRegonizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BADHoldGestureRegonizer.m; sourceTree = "<group>"; };
+		DA58FAA816629131003C6434 /* UIPanGestureRecognizer+DirectionalUIGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIPanGestureRecognizer+DirectionalUIGesture.h"; sourceTree = "<group>"; };
+		DA58FAA916629131003C6434 /* UIPanGestureRecognizer+DirectionalUIGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIPanGestureRecognizer+DirectionalUIGesture.m"; sourceTree = "<group>"; };
 		DAAFA2FB1639B9A700ACBF03 /* clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAAFA2FF1639B9A700ACBF03 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		DAAFA3011639B9A700ACBF03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -209,6 +212,8 @@
 			children = (
 				DAED8EC4164552FC00572EEE /* BADTime.h */,
 				DAED8EC5164552FC00572EEE /* BADTime.m */,
+				DA58FAA816629131003C6434 /* UIPanGestureRecognizer+DirectionalUIGesture.h */,
+				DA58FAA916629131003C6434 /* UIPanGestureRecognizer+DirectionalUIGesture.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				DAB0CF5D1641A4C100A6A2DB /* BADAlarmController.m in Sources */,
 				DAED8EC6164552FC00572EEE /* BADTime.m in Sources */,
 				DA4D5070164FF66B00112363 /* BADHoldGestureRegonizer.m in Sources */,
+				DA58FAAA16629131003C6434 /* UIPanGestureRecognizer+DirectionalUIGesture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
